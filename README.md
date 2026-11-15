@@ -1,14 +1,14 @@
-# 🩺 CareLink — Healthcare Management Platform
+CareLink — Healthcare Management Platform
 
 A full-stack healthcare management platform connecting **patients, doctors, pharmacies, laboratories, suppliers, and administrators** through a shared web application. CareLink combines appointment and service workflows with medical inventory, laboratory operations, administrative reporting, and an experimental AI assistance service.
 
-## 📌 Project Purpose
+## Project Purpose
 
 CareLink aims to simplify coordination between different healthcare roles by providing one interface for appointments, prescriptions, laboratory services, pharmacy operations, supplier activities, and operational oversight.
 
 > **Academic/portfolio project:** The AI symptom prediction and chatbot features are educational demonstrations, **not medical diagnoses or substitutes for professional care**. Do not enter real patient information into a public demo.
 
-## 🛠️ Technology Stack
+## Technology Stack
 
 | Layer | Technologies |
 | --- | --- |
@@ -19,41 +19,41 @@ CareLink aims to simplify coordination between different healthcare roles by pro
 | Authentication | JWT-based authentication and role-based interfaces |
 | Other | Maven, npm, REST APIs, email integration |
 
-## 📂 System Modules
+## System Modules
 
-### 1. 👤 User and Role Management
+### 1.User and Role Management
 - Registration and login flows for patients, doctors, and suppliers
 - Role-aware interfaces for administrators, doctors, pharmacists, suppliers, laboratory staff, and patients
 - Password recovery / OTP-related UI flows and administrative user management
 
-### 2. 📅 Appointment & Doctor Scheduling
+### 2.Appointment & Doctor Scheduling
 - Patient appointment workflows
 - Doctor availability and scheduling endpoints
 - Appointment status handling and notifications
 
-### 3. 💊 Pharmacy, Prescriptions & Inventory
+### 3.Pharmacy, Prescriptions & Inventory
 - Medicine and inventory records
 - Prescription workflows and medication sales
 - Inventory alerts, batch records, and purchasing processes
 
-### 4. 🧪 Laboratory Management
+### 4.Laboratory Management
 - Laboratory services and test catalog
 - Laboratory scheduling slots and report-related functionality
 
-### 5. 🚚 Supplier & Purchase Orders
+### 5.Supplier & Purchase Orders
 - Supplier and product management
 - Purchase order workflows and supplier dashboard
 
-### 6. 📊 Administration, Finance & Reports
+### 6.Administration, Finance & Reports
 - User administration and reporting pages
 - Finance dashboard, notices, and broadcast communications
 
-### 7. 🤖 AI & Analytics (Educational)
+### 7.AI & Analytics (Educational)
 - Symptom-based disease prediction prototype using a Random Forest model
 - AI chatbot integration through an external AI service
 - Feedback sentiment analysis endpoints
 
-## 🏗️ Architecture
+## Architecture
 
 ```text
 React + Vite frontend (port 3000)
@@ -67,7 +67,7 @@ React AI features ---------------> FastAPI service (port 8000)
                                      +-- Feedback analytics
 ```
 
-## 📁 Project Structure
+## Project Structure
 
 ```text
 CareLink/
@@ -78,7 +78,7 @@ CareLink/
 └── .gitignore
 ```
 
-## ⚙️ Running Locally
+## Running Locally
 
 ### Prerequisites
 - Node.js and npm
@@ -135,21 +135,7 @@ uvicorn app:app --reload --port 8000
 
 The local AI prediction prototype uses `Training.csv` to train a model at startup. Set `GEMINI_API_KEY` for the chatbot and the optional `CARELINK_AI_DB_*` / `EMAIL_*` values for the AI service's database and mail integrations. See `ai-service/.env.example`. The Python service reads **environment variables**, so export them before launch.
 
-## 🔐 Security & Privacy
 
-- Never commit API keys, production credentials, email app passwords or real patient data.
-- This public-ready copy excludes cached dependencies, local uploads and Git history, and replaces configuration secrets with environment variables.
-- Original credentials embedded in earlier versions **must be revoked/rotated** before public release.
-- Review authentication, authorization, CORS, and patient-data handling before any real-world use.
 
-## 🎯 Learning Outcomes
-
-Full-stack integration, role-aware web interfaces, REST API design, relational database modeling, healthcare workflow design, and integrating machine learning services with a web application.
-
-## 🚀 Possible Future Improvements
-
-Deployment hardening, end-to-end test coverage, improved data privacy controls, usability testing, and production-grade monitoring.
-
-## 📄 Project Note
 
 Project provided for demonstration and learning. Include any teammates and original dataset attribution before publishing if applicable.
