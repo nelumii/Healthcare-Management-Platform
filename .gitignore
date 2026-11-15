@@ -1,0 +1,23 @@
+# Dependencies / caches
+node_modules/
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+target/
+build/
+dist/
+coverage/
+# Sensitive / runtime data
+.env
+.env.*
+!.env.example
+uploads/
+*.log
+# Editors / OS
+.idea/
+.vscode/
+.DS_Store
+# Version control internals
+.git/
